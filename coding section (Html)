@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure File Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Secure File Management System</h1>
+
+        <!-- Authentication Section -->
+        <div id="auth">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button id="loginBtn">Login</button>
+            <p id="error-msg" style="color:red;"></p>
+        </div>
+
+        <!-- 2FA Verification -->
+        <div id="verify-otp" style="display: none;">
+            <h2>Enter OTP</h2>
+            <input type="text" id="otp" placeholder="Enter OTP" required>
+            <button id="verifyBtn">Verify</button>
+            <p id="otp-error" style="color:red;"></p>
+        </div>
+
+        <!-- File Management Section -->
+        <div id="fileOperations" style="display: none;">
+            <h2>File Operations</h2>
+            <input type="file" id="fileInput">
+            <button id="uploadBtn">Upload</button>
+            <button id="downloadBtn">Download</button>
+            <button id="logoutBtn">Logout</button>
+            <div id="fileList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
