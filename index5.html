@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secure File Management System</title>
+  <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+  <div id="container">
+
+    <!-- LOGIN PAGE -->
+    <div id="loginPage" class="page">
+      <h2>Login</h2>
+      <input type="text" id="loginUsername" placeholder="Username">
+      <input type="password" id="loginPassword" placeholder="Password">
+      <button onclick="login()">Login</button>
+      <p>New User? <a href="#" onclick="showPage('signupPage')">Sign up here</a></p>
+    </div>
+
+    <!-- SIGNUP PAGE -->
+    <div id="signupPage" class="page" style="display:none;">
+      <h2>Sign Up</h2>
+      <input type="text" id="signupUsername" placeholder="New Username">
+      <input type="password" id="signupPassword" placeholder="New Password">
+      <button onclick="signup()">Sign Up</button>
+      <p><a href="#" onclick="showPage('loginPage')">Back to Login</a></p>
+    </div>
+
+    <!-- OTP PAGE -->
+    <div id="otpPage" class="page" style="display:none;">
+      <h2>Security Verification</h2>
+      <input type="text" id="otpInput" placeholder="Enter OTP">
+      <button onclick="verifyOTP()">Verify</button>
+    </div>
+
+    <!-- FILE PAGE -->
+    <div id="filePage" class="page" style="display:none;">
+      <div class="header">
+        <h2>Secure File Management System</h2>
+        <button class="logoutBtn" onclick="logout()">Logout</button>
+      </div>
+
+      <input type="file" id="fileInput">
+      <button onclick="uploadFile()">Upload File</button>
+
+      <h3>Uploaded Files</h3>
+      <ul id="fileList"></ul>
+
+      <h3>CPU Scheduling</h3>
+      <div class="cpu-buttons">
+        <button onclick="runScheduling('fcfs')">First Come First Serve (FCFS)</button>
+        <button onclick="runScheduling('sjf')">Shortest Job First (SJF)</button>
+        <button onclick="runScheduling('priority')">Priority Scheduling</button>
+        <button onclick="runScheduling('rr')">Round Robin Scheduling</button>
+      </div>
+
+      <div id="scheduleExplanation"></div>
+      <div id="scheduleOutput"></div>
+    </div>
+
+  </div>
+
+  <script src="script5.js"></script>
+</body>
+</html>
